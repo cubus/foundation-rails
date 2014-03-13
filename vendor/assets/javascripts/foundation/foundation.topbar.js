@@ -196,7 +196,7 @@
             topbar.css('height', $this.siblings('ul').outerHeight(true) + topbar.data('height'));
           }
         });
-      
+
       S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function () {
         self.resize.call(self);
       }, 50)).trigger('resize');
@@ -311,7 +311,7 @@
           } else {
             var $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5></li>');
           }
-  
+
           // Copy link to subnav
           if (settings.custom_back_text == true) {
             $('h5>a', $titleLi).html(settings.back_text);
@@ -360,6 +360,8 @@
 
 
       if (self.S(klass).length > 0) {
+        var distance = 0;
+        if(this.settings.sticky_topbar) distance = this.settings.sticky_topbar.data('stickyoffset');
         var distance = this.settings.sticky_topbar.data('stickyoffset');
         if (!self.S(klass).hasClass('expanded')) {
           if ($window.scrollTop() > (distance)) {
