@@ -362,7 +362,6 @@
       if (self.S(klass).length > 0) {
         var distance = 0;
         if(this.settings.sticky_topbar) distance = this.settings.sticky_topbar.data('stickyoffset');
-        var distance = this.settings.sticky_topbar.data('stickyoffset');
         if (!self.S(klass).hasClass('expanded')) {
           if ($window.scrollTop() > (distance)) {
             if (!self.S(klass).hasClass('fixed')) {
